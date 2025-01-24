@@ -343,6 +343,10 @@ public class SocialLoginPlugin: CAPPlugin, CAPBridgedPlugin {
             call.reject(error.localizedDescription)
         }
     }
+
+    public static func bridgeClass() -> CAPBridgedPlugin.Type {
+        return SocialLoginPlugin.self
+    }
 }
 
 struct SocialLoginUser {
